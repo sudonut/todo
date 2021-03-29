@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+body {
+  background: hsl(235, 21%, 11%);
+}
+
+#bg-image {
+  width: 100%;
+  height: 32%;
+  background-image: url(/images/bg-desktop-dark.jpg);
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20%;
+  width: 92%;
+  letter-spacing: 1rem;
+  font-weight: 700;
+}
+
+#todo-enter {
+  height: 3rem;
+  width: 41rem;
+  margin-bottom: 26px;
+  background: hsl(235, 24%, 19%);
+  padding-top: 22px;
+  padding: 22px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  color: white;
+  caret-color: hsl(220, 98%, 61%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+}
+
+input:focus {
+  outline: none;
+}
+
+#todo-container {
+  display: flex;
+  flex-direction: column;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-radius: 3px 3px 0 0;
+  border-color: hsl(235, 24%, 19%);
+}
+
+.todo {
+  /* display: block; */
+  display: flex;
+  background: hsl(235, 24%, 19%);
+  height: 4rem;
+  width: 41rem;
+  padding: 20px;
+  font-weight: 300;
+  border-bottom-width: 0.1px;
+  border-bottom-style: solid;
+  border-color: hsl(233, 14%, 35%);
+  cursor: pointer;
+}
+
+.todo:hover > .delete-todo {
+  display: inline-block;
+}
+
+.todo-info {
+  flex-grow: 1;
+}
+
+.delete-todo {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 20px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: grey;
+}
+
+input[type="checkbox"]:checked + *::before {
+  content: "✓";
+  color: white;
+  text-align: center;
+  background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border-color: grey;
+}
+
+input[type="checkbox"]:checked ~ span {
+  text-decoration: line-through;
+}
+
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: hsl(235, 24%, 19%);
+  border-color: hsl(235, 24%, 19%);
+  height: 3.1rem;
+  width: 41rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-radius: 0 0 3px 3px;
+  font-weight: 300;
+  color: hsl(234, 11%, 52%);
+  font-weight: 400;
+
+}
+
+p:hover {
+  cursor: pointer;
+  transition: ease-in .2s;
+  color: white;
+}
+
+#filters {
+  display: flex;
+  justify-content: space-between;
+  width: 13rem;
+  font-size: 1rem;
+}
+

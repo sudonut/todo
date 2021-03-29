@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/37cb0d4f63.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="bg-image"></div>
+    <div class="app">
+      <header>
+        <h1>TODO</h1>
+        <i class="fas fa-adjust"></i>
+      </header>
+      <div id="todo-input">
+        <input type="text" id="todo-enter">
+      </div>
+      <div id="todo-container">
+        <label class="todo">
+          <input type="checkbox" class="checkbox">
+          <span class="todo-info">Plant some trees in the backyard</span>
+          <div class="delete-todo">❌</div>
+        </label>
+        <label class="todo">
+          <input type="checkbox" class="checkbox">
+          <span class="todo-info">Feed my little pooksie</span>
+          <div class="delete-todo">❌</div>
+        </label>
+        <label class="todo">
+          <input type="checkbox" class="checkbox">
+          <span class="todo-info">Go for a moonlight drive</span>
+          <div class="delete-todo">❌</div>
+        </label>
+        <label class="todo">
+          <input type="checkbox" class="checkbox">
+          <span class="todo-info">Make sandwiches for my pet dog</span>
+          <div class="delete-todo">❌</div>
+        </label>
+        <label class="todo">
+          <input type="checkbox" class="checkbox">
+          <span class="todo-info">Complete this todo app</span>
+          <div class="delete-todo">❌</div>
+        </label>
+      </div>
+      <div id="navigation">
+        <p>5 items left</p>
+        <div id="filters">
+          <p>All</p>
+          <p>Active</p>
+          <p>Completed</p>
+        </div>
+        <p>Clear Completed</p>
+      </div>
+    </div>
+    <script src="/script/script.js" async defer></script>
+  </body>
+</html>
