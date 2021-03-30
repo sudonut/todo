@@ -5,6 +5,7 @@ document.getElementById("todo-enter").addEventListener("keypress", (event) => {
   addTodo(event);
   deleteTodo();
 });
+deleteTodo();
 
 function addTodo(event) {
   let inputVal = document.getElementById("todo-enter").value;
@@ -32,11 +33,11 @@ function addTodo(event) {
   };
 };
 
-function deleteTodo() {
+function deleteTodo(index) {
   let removeTodo = document.getElementsByClassName("delete-todo");
-
   for (let i = 0; i < removeTodo.length; i++) {
     removeTodo[i].addEventListener("click", function deleteMe() {
+      todos.splice(index, 1);
       this.parentNode.remove();
     });
   };
