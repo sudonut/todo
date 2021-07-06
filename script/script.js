@@ -68,11 +68,11 @@ const list = document.querySelector("#todo-container");
 list.addEventListener("click", (event) => {
   if (event.target.classList.contains("checkbox")) {
     const itemKey = event.target.parentElement.dataset.key;
-    toggleDone(itemKey);
+    displayTodo(itemKey);
   }
 
   if (event.target.classList.contains("delete-todo")) {
-    const itemKey = event.target.parentElement.dataset.key;
+    const itemKey = event.target.parentElement.dataset.key; // The value of the parent elements data-key
     deleteTodo(itemKey);
   };
 });
@@ -85,6 +85,7 @@ function deleteTodo(key) {
     ...todos[index]
   };
 
+  console.log(...todos);
   todos = todos.filter(item => item.id !== Number(key));
   displayTodo(todo);
 }
