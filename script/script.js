@@ -85,7 +85,7 @@ function deleteTodo(key) {
     ...todos[index]
   };
 
-  console.log(...todos);
+  console.log(...todos)
   todos = todos.filter(item => item.id !== Number(key));
   displayTodo(todo);
 }
